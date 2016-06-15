@@ -13,18 +13,43 @@ class FeedViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    var fadeTransition: FadeTransition!
+
+    
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        let destinationViewController = segue.destinationViewController as! PhotoViewController
-        destinationViewController.image = self.imageView.image
+        
+        // Access the ViewController that you will be transitioning too, a.k.a, the destinationViewController.
+
+        var photoViewController = segue.destinationViewController as! PhotoViewController
+        
+        // Access the image to display
+
+        photoViewController.image = self.imageView.image
+        
+        
+        // Set the modal presentation style of your destinationViewController to be custom.
+        photoViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
+        
+        // Create a new instance of your fadeTransition.
+        fadeTransition = FadeTransition()
+        
+        // Tell the destinationViewController's  transitioning delegate to look in fadeTransition for transition instructions.
+        photoViewController.transitioningDelegate = fadeTransition
+        
+        // Adjust the transition duration. (seconds)
+        fadeTransition.duration = 1.0
+        
         
     }
     
     
     @IBAction func didTapImage(sender: UITapGestureRecognizer) {
+        
+        imageView = sender.view as! UIImageView
+
         performSegueWithIdentifier("Image Expanded", sender: self)
     }
     
-
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -20,6 +20,8 @@
 		886C80C81D0F5CDD002BD5FB /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C80C71D0F5CDD002BD5FB /* NotificationsViewController.swift */; };
 		886C80CA1D0F5D83002BD5FB /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C80C91D0F5D83002BD5FB /* MoreViewController.swift */; };
 		886C80CC1D0F6158002BD5FB /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C80CB1D0F6158002BD5FB /* PhotoViewController.swift */; };
+		88BC6C641D109AF4008B70E0 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC6C621D109AF4008B70E0 /* BaseTransition.swift */; };
+		88BC6C651D109AF4008B70E0 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC6C631D109AF4008B70E0 /* FadeTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		886C80C71D0F5CDD002BD5FB /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		886C80C91D0F5D83002BD5FB /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		886C80CB1D0F6158002BD5FB /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		88BC6C621D109AF4008B70E0 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
+		88BC6C631D109AF4008B70E0 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 				886C80C71D0F5CDD002BD5FB /* NotificationsViewController.swift */,
 				886C80C91D0F5D83002BD5FB /* MoreViewController.swift */,
 				886C80CB1D0F6158002BD5FB /* PhotoViewController.swift */,
+				88BC6C621D109AF4008B70E0 /* BaseTransition.swift */,
+				88BC6C631D109AF4008B70E0 /* FadeTransition.swift */,
 				886C80C11D0F5A8C002BD5FB /* RequestsViewController.swift */,
 				886C80BB1D0F5388002BD5FB /* FeedViewController.swift */,
 				886C80941D0F4BFA002BD5FB /* Assets.xcassets */,
@@ -278,7 +284,9 @@
 				886C80C61D0F5BEC002BD5FB /* MessagesViewController.swift in Sources */,
 				886C80901D0F4BFA002BD5FB /* ViewController.swift in Sources */,
 				886C80BC1D0F5388002BD5FB /* FeedViewController.swift in Sources */,
+				88BC6C641D109AF4008B70E0 /* BaseTransition.swift in Sources */,
 				886C80C81D0F5CDD002BD5FB /* NotificationsViewController.swift in Sources */,
+				88BC6C651D109AF4008B70E0 /* FadeTransition.swift in Sources */,
 				886C80CC1D0F6158002BD5FB /* PhotoViewController.swift in Sources */,
 				886C80C21D0F5A8C002BD5FB /* RequestsViewController.swift in Sources */,
 				886C808E1D0F4BFA002BD5FB /* AppDelegate.swift in Sources */,
@@ -506,6 +514,7 @@
 				886C80B41D0F4BFA002BD5FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		886C80B51D0F4BFA002BD5FB /* Build configuration list for PBXNativeTarget "HW5 - FacebookTests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +523,7 @@
 				886C80B71D0F4BFA002BD5FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		886C80B81D0F4BFA002BD5FB /* Build configuration list for PBXNativeTarget "HW5 - FacebookUITests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +532,7 @@
 				886C80BA1D0F4BFA002BD5FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
