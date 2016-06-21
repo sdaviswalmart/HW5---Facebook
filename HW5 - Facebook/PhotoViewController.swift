@@ -14,6 +14,7 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var actionButtons: UIImageView!
     @IBOutlet weak var likeField: UILabel!
+    @IBOutlet weak var likeButton: UIButton!
     
     var image: UIImage!
     var initialCenter: CGPoint!
@@ -28,6 +29,22 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func likeButtonTapped(sender: UIButton) {
         
+        sender.selected = true
+        
+        UIView.animateWithDuration(0.25, animations: {
+            self.likeButton.transform = CGAffineTransformMakeRotation (CGFloat(-8 * M_PI / 180))
+            self.likeButton.transform = CGAffineTransformMakeScale(1.6, 1.6)
+
+            },
+            completion: { (value: Bool) in
+                UIView.animateWithDuration(0.25,
+                    animations: {
+                        self.likeButton.transform = CGAffineTransformMakeRotation (CGFloat(0 * M_PI / 180))
+                    }
+                )
+        })
+        
+        
         UIView.animateWithDuration(0.5, animations: {
             self.actionButtons.transform = CGAffineTransformMakeTranslation(10,0)
         })
@@ -41,8 +58,6 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
 
     
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var likeButton: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,15 +122,15 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    //In a storyboard-based application, you will often want to do a little preparation before navigation
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        
     }
-    */
+
+  
 
 }

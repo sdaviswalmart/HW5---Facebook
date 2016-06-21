@@ -8,10 +8,13 @@
 
 import UIKit
 
+var likeButtonTapped: UIButton!
+
 class FeedViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var likeButtonDisplay: UIImageView!
     
     var fadeTransition: FadeTransition!
 
@@ -56,12 +59,33 @@ class FeedViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         scrollView.contentSize = CGSize (width: 320, height: 1000)
+        likeButtonDisplay.alpha = 0
 
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
+
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+            
+
+        
+        UIView.animateWithDuration(
+            0.3,delay: 2, options: .CurveEaseInOut, animations: {
+                self.likeButtonDisplay.alpha = 1
+            },
+            completion: nil)
+        
+        
     }
     
 

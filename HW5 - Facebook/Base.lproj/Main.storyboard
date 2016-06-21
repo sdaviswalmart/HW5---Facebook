@@ -61,6 +61,10 @@
                                             <outletCollection property="gestureRecognizers" destination="4Td-0C-l2z" appends="YES" id="BGd-X8-jcs"/>
                                         </connections>
                                     </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like_icon_blue" id="DJv-T7-oAe">
+                                        <rect key="frame" x="8" y="311" width="28" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                             </scrollView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="nav" id="eVZ-IN-HCm">
@@ -78,6 +82,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="imageView" destination="MK2-8b-BBp" id="jvC-6E-7oU"/>
+                        <outlet property="likeButtonDisplay" destination="DJv-T7-oAe" id="jpC-dG-SIz"/>
                         <outlet property="scrollView" destination="w77-Kc-L4j" id="fH9-rJ-HA5"/>
                         <segue destination="a8n-kV-pFO" kind="modal" identifier="Image Expanded" id="MhL-Db-oNd"/>
                     </connections>
@@ -150,7 +155,7 @@
                                         <rect key="frame" x="40" y="533" width="16" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.06667705625295639" green="0.55255073308944702" blue="0.99849963188171387" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="fIF-qH-aHd">
@@ -166,7 +171,7 @@
                         <outlet property="actionButtons" destination="rRU-MX-VqQ" id="nSG-3y-W16"/>
                         <outlet property="doneButton" destination="BD5-bT-e10" id="gag-6V-hI4"/>
                         <outlet property="expandedImage" destination="fIF-qH-aHd" id="mzf-nV-g8T"/>
-                        <outlet property="likeButton" destination="1Bb-Dd-LnA" id="L9b-ue-kWs"/>
+                        <outlet property="likeButton" destination="1Bb-Dd-LnA" id="ahy-Di-jFa"/>
                         <outlet property="likeField" destination="WBp-4i-BK8" id="2kc-5R-7V8"/>
                         <outlet property="scrollView" destination="lJa-Al-eng" id="r8g-7t-WQz"/>
                     </connections>
